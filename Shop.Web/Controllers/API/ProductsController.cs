@@ -2,6 +2,7 @@
 {
     using Data;
     using Microsoft.AspNetCore.Mvc;
+    using System.Linq;
 
     [Route("api/[Controller]")]
     public class ProductsController : Controller
@@ -16,7 +17,8 @@
         [HttpGet]
         public IActionResult GetProducts()
         {
-            return this.Ok(this.productRepository.GetAll());
-        }
+            return this.Ok(this.productRepository.GetAllWithUsers());
+        }       
+
     }
 }
