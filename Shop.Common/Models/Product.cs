@@ -6,28 +6,28 @@
     public class Product
     {
         [JsonProperty("id")]
-        public int Id { get; set; }
+        public long Id { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
 
         [JsonProperty("price")]
-        public decimal Price { get; set; }
+        public long Price { get; set; }
 
         [JsonProperty("imageUrl")]
         public string ImageUrl { get; set; }
 
         [JsonProperty("lastPurchase")]
-        public DateTime LastPurchase { get; set; }
+        public object LastPurchase { get; set; }
 
         [JsonProperty("lastSale")]
-        public DateTime LastSale { get; set; }
+        public object LastSale { get; set; }
 
         [JsonProperty("isAvailabe")]
         public bool IsAvailabe { get; set; }
 
         [JsonProperty("stock")]
-        public double Stock { get; set; }
+        public long Stock { get; set; }
 
         [JsonProperty("user")]
         public User User { get; set; }
