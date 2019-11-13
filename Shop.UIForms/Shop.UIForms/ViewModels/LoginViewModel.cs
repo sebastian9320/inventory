@@ -34,6 +34,13 @@ namespace Shop.UIForms.ViewModels
                 return;
             }
 
+            if (!this.Email.Equals("damjebecerra@gmail.com") || !this.Password.Equals("123456"))
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", "Incorrect user or password", "Accept");
+                return;
+            }
+
+
             //await Application.Current.MainPage.DisplayAlert(
             //    "Ok",
             //    "Fuck yehahh",
