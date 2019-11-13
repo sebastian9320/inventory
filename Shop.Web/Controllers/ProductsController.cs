@@ -82,9 +82,8 @@
                     path = $"~/images/Products/{file}";
                 }
 
-                var product = this.ToProduct(view, path);
-                // TODO: Pending to change to: this.User.Identity.Name
-                view.User = await this.userHelper.GetUserByEmailAsync("damjebecerra@gmail.com");
+                var product = this.ToProduct(view, path);                
+                view.User = await this.userHelper.GetUserByEmailAsync(this.User.Identity.Name);
                 await this.productRepository.CreateAsync(product);
                 return RedirectToAction(nameof(Index));
             }
@@ -172,8 +171,8 @@
                         path = $"~/images/Products/{file}";
                     }
 
-                    // TODO: Pending to change to: this.User.Identity.Name
-                    view.User = await this.userHelper.GetUserByEmailAsync("damjebecerra@gmail.com");
+                    
+                    view.User = await this.userHelper.GetUserByEmailAsync(this.User.Identity.Name);
                     var product = this.ToProduct(view, path);
                     await this.productRepository.UpdateAsync(product);
                 }
