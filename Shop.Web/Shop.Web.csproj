@@ -254,4 +254,6 @@
     <None Include="wwwroot\node_modules\font-awesome\scss\_variables.scss" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 </Project>

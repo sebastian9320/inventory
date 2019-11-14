@@ -15,18 +15,42 @@ using System.Net;
             this.configuration = configuration;
         }
 
+        //public void SendMail(string to, string subject, string body)
+        //{
+        //    var from = this.configuration["Mail:From"];
+        //    var smtp = this.configuration["Mail:Smtp"];
+        //    var port = this.configuration["Mail:Port"];
+        //    var password = this.configuration["Mail:Password"];
+        //
+        //    var message = new MimeMessage();
+        //    message.From.Add(new MailboxAddress(from));
+        //    message.To.Add(new MailboxAddress(to));
+        //    message.Subject = subject;
+        //    var bodyBuilder = new BodyBuilder();
+        //    bodyBuilder.HtmlBody = body;
+        //    message.Body = bodyBuilder.ToMessageBody();
+        //
+        //    using (var client = new SmtpClient())
+        //    {
+        //        client.Connect(smtp, int.Parse(port), false);
+        //        client.Authenticate(from, password);
+        //        client.Send(message);
+        //        client.Disconnect(true);
+        //    }
+        //}
+
         public void SendMail(string to, string subject, string body)
         {
             var from = this.configuration["Mail:From"];
             var smtp = this.configuration["Mail:Smtp"];
             var port = this.configuration["Mail:Port"];
             var password = this.configuration["Mail:Password"];
-
+        
             var bodyBuilder = new BodyBuilder
             {
                 HtmlBody = body
             };
-
+        
             var client = new System.Net.Mail.SmtpClient
             {
                 Host = smtp,
@@ -35,7 +59,7 @@ using System.Net;
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
                 Credentials = new NetworkCredential(from, password)
-
+        
             };
             using (var message = new MailMessage(from, to)
             {
@@ -48,5 +72,6 @@ using System.Net;
             }
         }
     }
-    }
+
+}
 
