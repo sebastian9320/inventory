@@ -28,8 +28,14 @@
         [Display(Name = "Is Availabe?")]
         public bool IsAvailabe { get; set; }
 
+        /** cambios 2.0*/
+        public string Description { get; set; }
+            
+            
+            /****/
         [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
-        public double Stock { get; set; }
+        
+        public double Stock { get; set; } 
 
         public User User { get; set; }
 

@@ -96,7 +96,8 @@ namespace Shop.UIForms.ViewModels
             mainViewModel.UserPassword = this.Password;
             mainViewModel.Token = token;
             mainViewModel.Products = new ProductsViewModel();
-            Application.Current.MainPage = new MasterPage();
+            Application.Current.MainPage = new Dashboard();
+            //Application.Current.MainPage = new MasterPage();
 
         }
     }

@@ -105,7 +105,7 @@ namespace Shop.UIForms.ViewModels
                 LastSale = p.LastSale,
                 Name = p.Name,
                 Price = p.Price,
-                Stock = p.Stock,
+                //Stock = p.Stock,
                 User = p.User
             })
             .OrderBy(p => p.Name)

@@ -9,7 +9,8 @@ namespace Shop.UIForms
     public partial class App : Application
     {
         public static NavigationPage Navigator { get; internal set; }
-        public static MasterPage Master { get; internal set; }
+        //public static MasterPage Master { get; internal set; }
+        public static Dashboard Master { get; internal set; }
 
         public App()
         {

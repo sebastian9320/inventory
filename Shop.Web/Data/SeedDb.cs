@@ -140,7 +140,7 @@ using System;
             Name = name,
             Price = price,
             IsAvailabe = true,
-            Stock = this.random.Next(100),
+            Stock = 0,
             User = user,
             ImageUrl = $"~/images/Products/{name}.png"
         });

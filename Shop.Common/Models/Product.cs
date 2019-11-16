@@ -25,10 +25,10 @@
 
         [JsonProperty("isAvailabe")]
         public bool IsAvailabe { get; set; }
-
+        /*
         [JsonProperty("stock")]
         public long Stock { get; set; }
-
+        */
         [JsonProperty("user")]
         public User User { get; set; }
 
