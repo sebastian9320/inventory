@@ -10,8 +10,7 @@
         public DbSet<Product> Products { get; set; }
 
         public DbSet<Warehouse> Warehouses { get; set; }
-        public DbSet<Stock> Stocks { get; set; }
-
+        
         public DbSet<Moves> Moves { get; set; }
 
         public DbSet<Country> Countries { get; set; }

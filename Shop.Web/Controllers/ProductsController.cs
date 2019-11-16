@@ -102,7 +102,6 @@
                 LastSale = view.LastSale,
                 Name = view.Name,
                 Price = view.Price,
-                Stock = view.Stock,
                 User = view.User
             };
         }
@@ -136,7 +135,6 @@
                 LastSale = product.LastSale,
                 Name = product.Name,
                 Price = product.Price,
-                Stock = product.Stock,
                 User = product.User
             };
         }
